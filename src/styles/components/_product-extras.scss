@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+.product-extras {
+  @include product-grid;
+
+  padding-top: $space-12;
+
+  @include mq($from: tablet) {
+    padding-top: $space-16;
+  }
+
+  &__related,
+  &__details {
+    min-width: 0;
+  }
+
+  &__size-chart {
+    margin-top: $space-12;
+  }
+}

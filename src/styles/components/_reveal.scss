@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+// Staggered scroll reveal, driven by src/components/Reveal.tsx.
+// Items are marked with [data-reveal] and a --reveal-index in the server HTML,
+// but are only hidden once JavaScript sets data-reveal-state="pending" after
+// mount, so content is never stuck invisible. With reduced motion none of
+// these styles apply.
+@include motion-safe {
+  [data-reveal-state="pending"] {
+    opacity: 0;
+    transform: translateY($reveal-distance);
+  }
+
+  [data-reveal-state="animating"] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity $duration-reveal $easing-emphasized,
+      transform $duration-reveal $easing-emphasized;
+    transition-delay: calc(var(--reveal-index, 0) * #{$reveal-stagger});
+    will-change: opacity, transform;
+  }
+}

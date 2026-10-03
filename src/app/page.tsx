@@ -1,3 +1,4 @@
+import ProductExtras from "@/components/ProductExtras";
 import ProductGallery from "@/components/ProductGallery";
 import ProductInfo from "@/components/ProductInfo";
 import SiteHeader from "@/components/SiteHeader";
@@ -11,13 +12,16 @@ export default function Home() {
   return (
     <CartProvider>
       <SiteHeader />
-      <main className="product-page">
-        <section className="product-page__gallery">
-          <ProductGallery images={product.images} />
-        </section>
-        <section className="product-page__info">
-          <ProductInfo product={product} />
-        </section>
+      <main>
+        <div className="product-page">
+          <section className="product-page__gallery">
+            <ProductGallery images={product.images} />
+          </section>
+          <section className="product-page__info">
+            <ProductInfo product={product} />
+          </section>
+        </div>
+        <ProductExtras />
       </main>
     </CartProvider>
   );
