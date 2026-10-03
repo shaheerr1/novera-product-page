@@ -1,0 +1,9 @@
+// Global stylesheet, imported once in src/app/layout.tsx.
+// Order: base first, then one partial per component block.
+
+// Base
+@use "base/reset";
+@use "base/typography";
+
+// Components
+// @use "components/<block>";

@@ -1,0 +1,34 @@
+// Design tokens. Components must reference these, never raw values.
+
+// Colour
+$color-ink: #000;
+$color-text: #444;
+$color-muted: #777;
+$color-panel: #f6f6f6;
+$color-border: #e2e2e2;
+$color-stock: #22c55e;
+$color-delivery: #3cb54a;
+$color-star: #f5a623;
+$color-white: #fff;
+
+// Font families (CSS variables are set by next/font in the root layout)
+$font-heading: var(--font-heading), georgia, "Times New Roman", serif;
+$font-body:
+  var(--font-body),
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  sans-serif;
+
+// Spacing scale
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-6: 24px;
+$space-8: 32px;
+
+// Radius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-pill: 999px;

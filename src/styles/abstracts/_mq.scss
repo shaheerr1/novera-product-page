@@ -1,0 +1,9 @@
+// Usage (mobile first): @include mq($from: tablet) { ... }
+@forward "sass-mq" with (
+  $breakpoints: (
+    mobile: 375px,
+    tablet: 768px,
+    desktop: 1024px,
+    wide: 1280px,
+  )
+);
