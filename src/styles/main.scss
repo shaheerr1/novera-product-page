@@ -4,7 +4,14 @@
 // Base
 @use "base/reset";
 @use "base/typography";
+@use "base/utilities";
 
 // Components
+@use "components/site-header";
 @use "components/product-page";
 @use "components/product-gallery";
+@use "components/product-info";
+@use "components/star-rating";
+@use "components/variant-picker";
+@use "components/quantity-stepper";
+@use "components/delivery-info";

@@ -7,13 +7,14 @@
   // Shared by the main image, thumbnails and slides (next/image with `fill`).
   &__image {
     object-fit: cover;
+    object-position: $image-focus;
   }
 
   // Tablet and up only
   &__main {
     display: none;
     position: relative;
-    aspect-ratio: 1;
+    aspect-ratio: $aspect-portrait;
     overflow: hidden;
     border-radius: $radius-md;
     background-color: $color-image-bg;
@@ -28,21 +29,22 @@
 
     @include mq($from: tablet) {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-auto-columns: minmax(0, 1fr);
+      grid-auto-flow: column;
       gap: $space-3;
     }
   }
 
   &__thumb {
     position: relative;
-    aspect-ratio: 1;
+    aspect-ratio: $aspect-portrait;
     overflow: hidden;
     border: $border-width solid $color-border;
     border-radius: $radius-sm;
     background-color: $color-image-bg;
 
-    @media (prefers-reduced-motion: no-preference) {
-      transition: border-color 0.2s ease;
+    @include motion-safe {
+      transition: border-color $duration-fast $easing-standard;
     }
 
     &:hover {
@@ -50,8 +52,7 @@
     }
 
     &:focus-visible {
-      outline: $focus-ring-width solid $color-ink;
-      outline-offset: $focus-ring-width;
+      @include focus-ring;
     }
 
     &--active,
@@ -74,8 +75,7 @@
     }
 
     &:focus-visible {
-      outline: $focus-ring-width solid $color-ink;
-      outline-offset: $focus-ring-width;
+      @include focus-ring;
     }
 
     @include mq($from: tablet) {
@@ -86,7 +86,7 @@
   &__slide {
     position: relative;
     flex: 0 0 100%;
-    aspect-ratio: 1;
+    aspect-ratio: $aspect-portrait;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     background-color: $color-image-bg;
@@ -108,10 +108,10 @@
     border-radius: $radius-pill;
     background-color: $color-border;
 
-    @media (prefers-reduced-motion: no-preference) {
+    @include motion-safe {
       transition:
-        width 0.2s ease,
-        background-color 0.2s ease;
+        width $duration-fast $easing-standard,
+        background-color $duration-fast $easing-standard;
     }
 
     &--active {

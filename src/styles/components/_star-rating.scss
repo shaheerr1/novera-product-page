@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.star-rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-1;
+  font-size: $font-size-sm;
+  color: $color-ink;
+
+  &__stars {
+    display: inline-flex;
+    gap: $space-1;
+    margin-right: $space-2;
+  }
+
+  &__star {
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+  }
+
+  &__outline {
+    fill: none;
+    stroke: $color-star;
+    stroke-width: $icon-stroke;
+    stroke-linejoin: round;
+  }
+
+  &__fill {
+    fill: $color-star;
+    stroke: $color-star;
+    stroke-width: $icon-stroke;
+    stroke-linejoin: round;
+  }
+
+  &__count {
+    color: $color-muted;
+  }
+}

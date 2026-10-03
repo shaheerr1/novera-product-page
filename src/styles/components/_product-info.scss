@@ -1,0 +1,187 @@
+@use "../abstracts" as *;
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  > * {
+    width: 100%;
+  }
+
+  &__title {
+    margin-top: $space-4;
+    font-size: $font-size-xl;
+
+    @include mq($from: tablet) {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  &__price {
+    margin-top: $space-3;
+    font-size: $font-size-lg;
+    color: $color-text;
+  }
+
+  &__description {
+    max-width: $description-max-width;
+    margin-top: $space-4;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+    color: $color-muted;
+  }
+
+  &__learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-1;
+    font-weight: $font-weight-semibold;
+    color: $color-ink;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+
+      border-radius: $radius-sm;
+    }
+  }
+
+  &__learn-more-icon {
+    width: $space-3;
+    height: $space-3;
+  }
+
+  // Favourite, size guide and stock. Mobile wraps with plain gaps; from tablet
+  // the items sit on one line separated by thin vertical rules.
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-3 $space-6;
+    margin-top: $space-8;
+    font-size: $font-size-sm;
+    color: $color-text;
+
+    @include mq($from: tablet) {
+      gap: 0;
+    }
+  }
+
+  &__meta-item {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+
+    @include mq($from: tablet) {
+      padding-inline: $space-6;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      & + & {
+        border-left: $border-width solid $color-border;
+      }
+    }
+  }
+
+  &__meta-action {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    color: inherit;
+
+    &:hover {
+      color: $color-ink;
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+
+      border-radius: $radius-sm;
+    }
+  }
+
+  &__meta-icon {
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+    color: $color-ink;
+  }
+
+  &__heart {
+    @include motion-safe {
+      transition: fill $duration-fast $easing-standard;
+    }
+  }
+
+  &__meta-action--active &__heart {
+    fill: $color-brand;
+    color: $color-brand;
+  }
+
+  &__stock {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+
+    &::before {
+      content: "";
+      width: $space-2;
+      height: $space-2;
+      border-radius: $radius-pill;
+      background-color: $color-stock;
+    }
+
+    &--out::before {
+      background-color: $color-muted;
+    }
+  }
+
+  &__variants {
+    margin-top: $space-8;
+  }
+
+  &__purchase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-4;
+    margin-top: $space-8;
+  }
+
+  &__add {
+    min-width: $control-width;
+    height: $control-height;
+    padding-inline: $space-6;
+    border-radius: $radius-pill;
+    background-color: $color-ink;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+      background-color: $color-text;
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+
+    &:disabled {
+      background-color: $color-border;
+      color: $color-muted;
+      cursor: not-allowed;
+    }
+
+    @include motion-safe {
+      transition: background-color $duration-fast $easing-standard;
+    }
+  }
+
+  &__delivery {
+    margin-top: $space-8;
+  }
+}

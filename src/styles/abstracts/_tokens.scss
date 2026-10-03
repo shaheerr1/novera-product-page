@@ -1,4 +1,5 @@
 // Design tokens. Components must reference these, never raw values.
+@use "sass:list";
 
 // Colour
 $color-ink: #000;
@@ -8,9 +9,12 @@ $color-panel: #f6f6f6;
 $color-border: #e2e2e2;
 $color-stock: #22c55e;
 $color-delivery: #3cb54a;
-$color-star: #f5a623;
+$color-star: #f70; // sampled from the reference
+$color-brand: #960200; // novera wordmark and basket badge
 $color-white: #fff;
 $color-image-bg: #f3eee7; // warm backdrop behind product shots
+$color-swatch-edge: rgb(0 0 0 / 10%); // keeps pale swatches visible on the panel
+$color-header-scrolled: rgb(255 255 255 / 80%);
 
 // Font families (CSS variables are set by next/font in the root layout)
 $font-heading: var(--font-heading), georgia, "Times New Roman", serif;
@@ -20,6 +24,26 @@ $font-body:
   -apple-system,
   "Segoe UI",
   sans-serif;
+
+// Font sizes
+$font-size-2xs: 10px;
+$font-size-xs: 12px;
+$font-size-sm: 13px;
+$font-size-base: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 28px;
+$font-size-2xl: 36px;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-tight: 1.1;
+$line-height-base: 1.5;
 
 // Spacing scale
 $space-1: 4px;
@@ -37,6 +61,30 @@ $focus-ring-width: 2px;
 $radius-sm: 8px;
 $radius-md: 12px;
 $radius-pill: 999px;
+
+// Sizes
+$icon-size-sm: 16px;
+$icon-size-md: 22px;
+$icon-stroke: 1.5;
+$swatch-size: 24px;
+$control-height: 44px; // stepper, Add to Cart, header icon buttons
+$control-width: 128px; // stepper and Add to Cart in the purchase row
+$size-pill-width: 52px;
+$size-pill-height: 28px;
+$header-height: 54px;
+$description-max-width: 400px;
+
+// Effects
+$shadow-raised: 0 8px 24px rgb(0 0 0 / 8%);
+$blur-header: 12px;
+
+// Motion
+$duration-fast: 0.2s;
+$easing-standard: ease;
+
+// Media
+$aspect-portrait: list.slash(4, 5); // product photos are portrait
+$image-focus: center 20%; // keeps the collar and chest in frame when cropped
 
 // Layout
 $layout-max-width: 1200px;

@@ -1,0 +1,119 @@
+@use "../abstracts" as *;
+
+.variant-picker {
+  padding: $space-6;
+  border-radius: $radius-md;
+  background-color: $color-panel;
+
+  @include mq($from: tablet) {
+    padding: $space-8;
+  }
+
+  &__group {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  &__label {
+    margin-bottom: $space-4;
+    font-family: $font-heading;
+    font-size: $font-size-base;
+    color: $color-ink;
+  }
+
+  &__divider {
+    margin-block: $space-6;
+    border: 0;
+    border-top: $border-width solid $color-border;
+
+    @include mq($from: tablet) {
+      margin-block: $space-8;
+    }
+  }
+
+  // Colour swatches: native radios restyled as filled circles.
+  &__swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+  }
+
+  &__swatch-wrap {
+    display: inline-flex;
+  }
+
+  &__swatch {
+    width: $swatch-size;
+    height: $swatch-size;
+    border-radius: $radius-pill;
+    background-color: var(--swatch-colour);
+    box-shadow: inset 0 0 0 $border-width $color-swatch-edge;
+    cursor: pointer;
+    appearance: none;
+
+    @include motion-safe {
+      transition: box-shadow $duration-fast $easing-standard;
+    }
+
+    // Ring with a small gap in the panel colour, as in the design.
+    &:checked {
+      box-shadow:
+        0 0 0 $focus-ring-width $color-panel,
+        0 0 0 ($focus-ring-width + $border-width) $color-ink;
+    }
+
+    &:focus-visible {
+      @include focus-ring($space-1);
+    }
+  }
+
+  // Sizes: visually hidden radios with the label styled as a pill.
+  &__sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+  }
+
+  &__size-wrap {
+    display: inline-flex;
+  }
+
+  &__size {
+    display: inline-grid;
+    place-items: center;
+    min-width: $size-pill-width;
+    height: $size-pill-height;
+    padding-inline: $space-3;
+    border: $border-width solid $color-border;
+    border-radius: $radius-pill;
+    background-color: $color-white;
+    font-size: $font-size-sm;
+    color: $color-ink;
+    cursor: pointer;
+
+    @include motion-safe {
+      transition: border-color $duration-fast $easing-standard;
+    }
+
+    &:hover {
+      border-color: $color-muted;
+    }
+  }
+
+  &__size-input:checked + &__size {
+    border-color: $color-ink;
+  }
+
+  &__size-input:focus-visible + &__size {
+    @include focus-ring;
+  }
+
+  &__size-input:disabled + &__size {
+    border-color: $color-border;
+    background-color: transparent;
+    color: $color-muted;
+    text-decoration: line-through;
+    cursor: not-allowed;
+  }
+}

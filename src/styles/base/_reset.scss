@@ -12,6 +12,10 @@
 
 html {
   text-size-adjust: 100%;
+
+  @include motion-safe {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

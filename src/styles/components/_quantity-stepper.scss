@@ -1,0 +1,61 @@
+@use "../abstracts" as *;
+
+.quantity-stepper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: $control-width;
+  height: $control-height;
+  padding-inline: $space-2;
+  border: $border-width solid $color-border;
+  border-radius: $radius-pill;
+  background-color: $color-white;
+
+  &__button {
+    display: inline-grid;
+    place-items: center;
+    width: $space-8;
+    height: $space-8;
+    border-radius: $radius-pill;
+    color: $color-ink;
+
+    &:hover:not(:disabled) {
+      background-color: $color-panel;
+    }
+
+    &:focus-visible {
+      @include focus-ring(0);
+    }
+
+    &:disabled {
+      color: $color-border;
+      cursor: not-allowed;
+    }
+
+    @include motion-safe {
+      transition: background-color $duration-fast $easing-standard;
+    }
+  }
+
+  &__icon {
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+  }
+
+  &__input {
+    width: $space-8;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $color-ink;
+    text-align: center;
+
+    &:focus-visible {
+      @include focus-ring(0);
+
+      border-radius: $radius-sm;
+    }
+  }
+}
