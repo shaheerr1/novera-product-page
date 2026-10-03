@@ -1,0 +1,82 @@
+@use "../abstracts" as *;
+
+.related-products {
+  &__title {
+    margin-bottom: $space-6;
+    font-size: $font-size-xl;
+  }
+
+  // Two cards side by side at every width.
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $space-4;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: $radius-md;
+
+    &:focus-visible {
+      @include focus-ring($space-1);
+    }
+  }
+
+  &__media {
+    position: relative;
+    display: block;
+    aspect-ratio: $aspect-portrait;
+    margin-bottom: $space-4;
+    overflow: hidden;
+    border-radius: $radius-md;
+    background-color: $color-image-bg;
+  }
+
+  &__image {
+    object-fit: cover;
+
+    @include motion-safe {
+      transition: transform $duration-medium $easing-standard;
+    }
+  }
+
+  @include motion-safe {
+    &__card:hover &__image {
+      transform: scale($hover-scale);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: $space-3;
+    right: $space-3;
+    padding: $space-1 $space-3;
+    border-radius: $radius-pill;
+    background-color: $color-white;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-base;
+    color: $color-brand;
+  }
+
+  &__price {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: $color-brand;
+  }
+
+  &__name {
+    margin-top: $space-1;
+    font-family: $font-heading;
+    font-size: $font-size-md;
+    line-height: $line-height-tight;
+    color: $color-ink;
+  }
+
+  &__category {
+    margin-top: $space-2;
+    font-size: $font-size-xs;
+    color: $color-muted;
+  }
+}

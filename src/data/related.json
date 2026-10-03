@@ -1,0 +1,25 @@
+[
+  {
+    "id": "sable-crossbody-bag",
+    "name": "Sable crossbody bag",
+    "price": { "amount": 64.99, "currency": "GBP" },
+    "category": "Hand Bag",
+    "badge": "Trending",
+    "image": {
+      "src": "/images/related/1.jpg",
+      "alt": "Tan leather crossbody bag with a large buckle",
+      "objectPosition": "center 55%"
+    }
+  },
+  {
+    "id": "crestline-wool-coat",
+    "name": "Crestline wool coat",
+    "price": { "amount": 48.99, "currency": "GBP" },
+    "category": "Ready to Wear",
+    "image": {
+      "src": "/images/related/2.jpg",
+      "alt": "Model wearing a dark brown wool coat at night",
+      "objectPosition": "center 30%"
+    }
+  }
+]

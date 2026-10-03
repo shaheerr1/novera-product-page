@@ -40,3 +40,20 @@ export interface Product {
   stock: StockMatrix;
   images: ProductImage[];
 }
+
+export interface RelatedProduct {
+  id: string;
+  name: string;
+  price: Price;
+  category: string;
+  badge?: string;
+  image: ProductImage & { objectPosition?: string };
+}
+
+export type Measurement = "chest" | "length" | "sleeve";
+
+export interface SizeChart {
+  columns: { key: Measurement; label: string }[];
+  /** Measurements in inches. */
+  rows: ({ size: string } & Record<Measurement, number>)[];
+}
