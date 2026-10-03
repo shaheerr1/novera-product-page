@@ -1,0 +1,122 @@
+@use "../abstracts" as *;
+
+.product-gallery {
+  display: grid;
+  gap: $space-3;
+
+  // Shared by the main image, thumbnails and slides (next/image with `fill`).
+  &__image {
+    object-fit: cover;
+  }
+
+  // Tablet and up only
+  &__main {
+    display: none;
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: $radius-md;
+    background-color: $color-image-bg;
+
+    @include mq($from: tablet) {
+      display: block;
+    }
+  }
+
+  &__thumbs {
+    display: none;
+
+    @include mq($from: tablet) {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: $space-3;
+    }
+  }
+
+  &__thumb {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: $border-width solid $color-border;
+    border-radius: $radius-sm;
+    background-color: $color-image-bg;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: border-color 0.2s ease;
+    }
+
+    &:hover {
+      border-color: $color-muted;
+    }
+
+    &:focus-visible {
+      outline: $focus-ring-width solid $color-ink;
+      outline-offset: $focus-ring-width;
+    }
+
+    &--active,
+    &--active:hover {
+      border-color: $color-ink;
+    }
+  }
+
+  // Below tablet only
+  &__track {
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-radius: $radius-md;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline: $focus-ring-width solid $color-ink;
+      outline-offset: $focus-ring-width;
+    }
+
+    @include mq($from: tablet) {
+      display: none;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    flex: 0 0 100%;
+    aspect-ratio: 1;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    background-color: $color-image-bg;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: $space-2;
+
+    @include mq($from: tablet) {
+      display: none;
+    }
+  }
+
+  &__dot {
+    width: $space-2;
+    height: $space-2;
+    border-radius: $radius-pill;
+    background-color: $color-border;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        width 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+    &--active {
+      width: $space-4;
+      background-color: $color-ink;
+    }
+  }
+}

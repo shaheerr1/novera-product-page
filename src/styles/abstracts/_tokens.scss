@@ -10,6 +10,7 @@ $color-stock: #22c55e;
 $color-delivery: #3cb54a;
 $color-star: #f5a623;
 $color-white: #fff;
+$color-image-bg: #f3eee7; // warm backdrop behind product shots
 
 // Font families (CSS variables are set by next/font in the root layout)
 $font-heading: var(--font-heading), georgia, "Times New Roman", serif;
@@ -27,6 +28,10 @@ $space-3: 12px;
 $space-4: 16px;
 $space-6: 24px;
 $space-8: 32px;
+
+// Borders
+$border-width: 1px;
+$focus-ring-width: 2px;
 
 // Radius
 $radius-sm: 8px;
