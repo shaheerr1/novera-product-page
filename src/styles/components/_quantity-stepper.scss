@@ -1,15 +1,19 @@
 @use "../abstracts" as *;
 
 .quantity-stepper {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: $control-width;
-  height: $control-height;
+  justify-content: space-between; // minus and plus at the ends, number centred
+  width: 100%; // the parent decides the width
+  height: $control-height-touch;
   padding-inline: $space-2;
   border: $border-width solid $color-border;
   border-radius: $radius-pill;
   background-color: $color-white;
+
+  @include mq($from: tablet) {
+    height: $control-height;
+  }
 
   &__button {
     display: inline-grid;

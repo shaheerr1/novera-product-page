@@ -116,12 +116,14 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       </div>
 
       <div className="product-info__purchase">
-        <QuantityStepper
-          key={`${colour}-${size}`}
-          value={quantity}
-          max={stock}
-          onChange={setQuantity}
-        />
+        <div className="product-info__quantity">
+          <QuantityStepper
+            key={`${colour}-${size}`}
+            value={quantity}
+            max={stock}
+            onChange={setQuantity}
+          />
+        </div>
         <button
           type="button"
           className="product-info__add"

@@ -59,6 +59,12 @@ a {
   text-decoration: none;
 }
 
+// Focus rings are for keyboard users: components style :focus-visible, and
+// no browser should leave an outline on an element after a mouse click.
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 p,
 h1,
 h2,

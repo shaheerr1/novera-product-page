@@ -26,10 +26,6 @@
     margin-block: $space-6;
     border: 0;
     border-top: $border-width solid $color-border;
-
-    @include mq($from: tablet) {
-      margin-block: $space-8;
-    }
   }
 
   // Colour swatches: native radios restyled as filled circles.

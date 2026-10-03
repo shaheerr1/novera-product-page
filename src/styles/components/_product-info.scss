@@ -145,17 +145,37 @@
     margin-top: $space-8;
   }
 
+  // Below "small": stepper and button stacked, full width. From "small": one
+  // row, stepper at its natural width and the button filling the rest. From
+  // tablet: both at the fixed sizes from the design.
   &__purchase {
     display: flex;
-    flex-wrap: wrap;
-    gap: $space-4;
+    flex-direction: column;
+    gap: $space-3;
     margin-top: $space-8;
+
+    @include mq($from: small) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include mq($from: tablet) {
+      gap: $space-4;
+    }
+  }
+
+  &__quantity {
+    display: flex;
+
+    @include mq($from: small) {
+      flex: 0 0 $control-width;
+    }
   }
 
   &__add {
-    min-width: $control-width;
-    height: $control-height;
+    height: $control-height-touch;
     padding-inline: $space-6;
+    white-space: nowrap;
     border-radius: $radius-pill;
     background-color: $color-ink;
     font-size: $font-size-base;
@@ -174,6 +194,16 @@
       background-color: $color-border;
       color: $color-muted;
       cursor: not-allowed;
+    }
+
+    @include mq($from: small) {
+      flex: 1;
+    }
+
+    @include mq($from: tablet) {
+      flex: none;
+      min-width: $control-width;
+      height: $control-height;
     }
 
     @include motion-safe {

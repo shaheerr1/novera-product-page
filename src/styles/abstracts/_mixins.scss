@@ -1,4 +1,5 @@
 @use "tokens" as *;
+@use "mq" as *;
 
 // Wrap every transition or animation so it only runs for users who have not
 // asked for reduced motion.
@@ -25,4 +26,26 @@
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
+}
+
+// Page-width grid shared by the product section and the extras below it, so
+// their columns line up: one column on mobile, two equal from tablet, 5fr 6fr
+// (info column slightly wider) from desktop.
+@mixin product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+  max-width: $layout-max-width;
+  margin-inline: auto;
+  padding: $space-4;
+
+  @include mq($from: tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-8;
+    padding: $space-8;
+  }
+
+  @include mq($from: desktop) {
+    grid-template-columns: 5fr 6fr;
+  }
 }

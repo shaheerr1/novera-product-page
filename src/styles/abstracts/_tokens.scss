@@ -52,6 +52,8 @@ $space-3: 12px;
 $space-4: 16px;
 $space-6: 24px;
 $space-8: 32px;
+$space-12: 48px;
+$space-16: 64px;
 
 // Borders
 $border-width: 1px;
@@ -68,11 +70,17 @@ $icon-size-md: 22px;
 $icon-stroke: 1.5;
 $swatch-size: 24px;
 $control-height: 44px; // stepper, Add to Cart, header icon buttons
+$control-height-touch: 48px; // stepper and Add to Cart below tablet
 $control-width: 128px; // stepper and Add to Cart in the purchase row
 $size-pill-width: 52px;
 $size-pill-height: 28px;
 $header-height: 54px;
 $description-max-width: 400px;
+$toggle-pill-width: 72px; // INCH / CM toggle
+$table-row-height: 40px; // size chart rows
+
+// In-page anchor targets clear the sticky header (its top padding, bar height and some air).
+$scroll-offset: $header-height + $space-6 + $space-8;
 
 // Effects
 $shadow-raised: 0 8px 24px rgb(0 0 0 / 8%);
@@ -80,7 +88,13 @@ $blur-header: 12px;
 
 // Motion
 $duration-fast: 0.2s;
+$duration-medium: 0.3s;
+$duration-reveal: 0.7s;
+$reveal-stagger: 80ms; // delay between items in a reveal group
+$reveal-distance: 40px;
 $easing-standard: ease;
+$easing-emphasized: cubic-bezier(0.22, 1, 0.36, 1); // reveal and accordion
+$hover-scale: 1.03;
 
 // Media
 $aspect-portrait: list.slash(4, 5); // product photos are portrait
