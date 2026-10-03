@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+  max-width: $layout-max-width;
+  margin-inline: auto;
+  padding: $space-4;
+
+  @include mq($from: tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-8;
+    padding: $space-8;
+  }
+
+  @include mq($from: desktop) {
+    grid-template-columns: 5fr 6fr;
+  }
+
+  &__gallery,
+  &__info {
+    min-width: 0;
+  }
+
+  &__gallery {
+    @include mq($from: desktop) {
+      position: sticky;
+      top: $space-8;
+      align-self: start;
+    }
+  }
+}

@@ -1,3 +1,8 @@
 export default function Home() {
-  return <main className="page">Novera product page</main>;
+  return (
+    <main className="product-page">
+      <section className="product-page__gallery">Gallery</section>
+      <section className="product-page__info">Info</section>
+    </main>
+  );
 }
