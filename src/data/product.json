@@ -1,0 +1,36 @@
+{
+  "id": "novera-lightweight-jacket",
+  "brand": "Novera",
+  "name": "Lightweight Jacket",
+  "price": {
+    "amount": 24.99,
+    "currency": "GBP"
+  },
+  "rating": {
+    "average": 4.9,
+    "count": 2500
+  },
+  "description": "A packable, water-resistant shell cut for everyday layering. Breathable, featherlight and finished with a relaxed fit that moves with you.",
+  "colours": [
+    { "id": "grey", "name": "Grey", "hex": "#b5b5b0" },
+    { "id": "charcoal", "name": "Charcoal", "hex": "#3a3a3c" },
+    { "id": "mustard", "name": "Mustard", "hex": "#d4a23a" },
+    { "id": "lime", "name": "Lime", "hex": "#c5dc5a" },
+    { "id": "pink", "name": "Pink", "hex": "#f2b8c6" }
+  ],
+  "sizes": ["S", "M", "L", "XL"],
+  "stock": {
+    "grey": { "S": 12, "M": 18, "L": 9, "XL": 4 },
+    "charcoal": { "S": 7, "M": 0, "L": 15, "XL": 6 },
+    "mustard": { "S": 0, "M": 5, "L": 3, "XL": 0 },
+    "lime": { "S": 10, "M": 8, "L": 0, "XL": 2 },
+    "pink": { "S": 3, "M": 11, "L": 6, "XL": 0 }
+  },
+  "images": [
+    { "src": "/images/novera/1.jpg", "alt": "Lightweight Jacket, front view" },
+    { "src": "/images/novera/2.jpg", "alt": "Lightweight Jacket, back view" },
+    { "src": "/images/novera/3.jpg", "alt": "Lightweight Jacket, side view" },
+    { "src": "/images/novera/4.jpg", "alt": "Lightweight Jacket, fabric detail" },
+    { "src": "/images/novera/5.jpg", "alt": "Lightweight Jacket, worn on model" }
+  ]
+}
