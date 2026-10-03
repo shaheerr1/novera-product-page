@@ -16,8 +16,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Novera | Lightweight Jacket",
-  description: "Novera Lightweight Jacket product page",
+  title: "Novera | Twill Overshirt",
+  description: "Novera Twill Overshirt product page",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
