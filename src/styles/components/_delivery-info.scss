@@ -30,4 +30,9 @@
     margin: 0;
     color: $color-delivery;
   }
+
+  // Holds the space of the range until it is calculated in the browser.
+  &__placeholder {
+    visibility: hidden;
+  }
 }
