@@ -1,0 +1,12 @@
+{
+  "columns": [
+    { "key": "chest", "label": "Chest (round)" },
+    { "key": "length", "label": "Length" },
+    { "key": "sleeve", "label": "Sleeve" }
+  ],
+  "rows": [
+    { "size": "M", "chest": 39, "length": 27.5, "sleeve": 8.5 },
+    { "size": "L", "chest": 40.5, "length": 28, "sleeve": 8.75 },
+    { "size": "XL", "chest": 43, "length": 29, "sleeve": 9 }
+  ]
+}
