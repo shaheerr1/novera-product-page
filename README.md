@@ -58,8 +58,8 @@ Then open http://localhost:3000.
 
 ## Credits
 
-- Design: [Designer Name], [Ecommerce Product Page Design](https://dribbble.com/shots/27634338-Ecommerce-Product-Page-Design)
-- Photography from Pexels: [name] (overshirt), [name] (bag), [name] (coat)
+- Design: [Ecommerce Product Page Design](https://dribbble.com/shots/27634338-Ecommerce-Product-Page-Design) on Dribbble
+- Photography: [Pexels](https://www.pexels.com)
 
 ## Next steps
 
