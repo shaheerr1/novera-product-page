@@ -1,6 +1,6 @@
 export type CurrencyCode = "GBP";
 
-export type ColourId = "grey" | "charcoal" | "mustard" | "lime" | "pink";
+export type ColourId = "sage" | "charcoal" | "mustard" | "lime" | "pink";
 
 export type Size = "S" | "M" | "L" | "XL";
 

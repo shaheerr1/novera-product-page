@@ -1,7 +1,7 @@
 {
-  "id": "novera-lightweight-jacket",
+  "id": "novera-twill-overshirt",
   "brand": "Novera",
-  "name": "Lightweight Jacket",
+  "name": "Twill Overshirt",
   "price": {
     "amount": 24.99,
     "currency": "GBP"
@@ -10,27 +10,83 @@
     "average": 4.9,
     "count": 2500
   },
-  "description": "A packable, water-resistant shell cut for everyday layering. Breathable, featherlight and finished with a relaxed fit that moves with you.",
+  "description": "A relaxed overshirt in soft cotton twill, finished with chest flap pockets. Light enough to wear as a shirt and roomy enough to throw over a tee for easy layering.",
   "colours": [
-    { "id": "grey", "name": "Grey", "hex": "#b5b5b0" },
-    { "id": "charcoal", "name": "Charcoal", "hex": "#3a3a3c" },
-    { "id": "mustard", "name": "Mustard", "hex": "#d4a23a" },
-    { "id": "lime", "name": "Lime", "hex": "#c5dc5a" },
-    { "id": "pink", "name": "Pink", "hex": "#f2b8c6" }
+    {
+      "id": "sage",
+      "name": "Sage",
+      "hex": "#c8d1c2"
+    },
+    {
+      "id": "charcoal",
+      "name": "Charcoal",
+      "hex": "#3a3a3c"
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard",
+      "hex": "#d4a23a"
+    },
+    {
+      "id": "lime",
+      "name": "Lime",
+      "hex": "#c5dc5a"
+    },
+    {
+      "id": "pink",
+      "name": "Pink",
+      "hex": "#f2b8c6"
+    }
   ],
   "sizes": ["S", "M", "L", "XL"],
   "stock": {
-    "grey": { "S": 12, "M": 18, "L": 9, "XL": 4 },
-    "charcoal": { "S": 7, "M": 0, "L": 15, "XL": 6 },
-    "mustard": { "S": 0, "M": 5, "L": 3, "XL": 0 },
-    "lime": { "S": 10, "M": 8, "L": 0, "XL": 2 },
-    "pink": { "S": 3, "M": 11, "L": 6, "XL": 0 }
+    "sage": {
+      "S": 12,
+      "M": 18,
+      "L": 9,
+      "XL": 4
+    },
+    "charcoal": {
+      "S": 7,
+      "M": 0,
+      "L": 15,
+      "XL": 6
+    },
+    "mustard": {
+      "S": 0,
+      "M": 5,
+      "L": 3,
+      "XL": 0
+    },
+    "lime": {
+      "S": 10,
+      "M": 8,
+      "L": 0,
+      "XL": 2
+    },
+    "pink": {
+      "S": 3,
+      "M": 11,
+      "L": 6,
+      "XL": 0
+    }
   },
   "images": [
-    { "src": "/images/novera/1.jpg", "alt": "Lightweight Jacket, front view" },
-    { "src": "/images/novera/2.jpg", "alt": "Lightweight Jacket, back view" },
-    { "src": "/images/novera/3.jpg", "alt": "Lightweight Jacket, side view" },
-    { "src": "/images/novera/4.jpg", "alt": "Lightweight Jacket, fabric detail" },
-    { "src": "/images/novera/5.jpg", "alt": "Lightweight Jacket, worn on model" }
+    {
+      "src": "/images/novera/1.jpg",
+      "alt": "Open overshirt worn with the collar up"
+    },
+    {
+      "src": "/images/novera/2.jpg",
+      "alt": "Overshirt draped over the shoulders"
+    },
+    {
+      "src": "/images/novera/3.jpg",
+      "alt": "Close front view showing the chest pockets"
+    },
+    {
+      "src": "/images/novera/4.jpg",
+      "alt": "Close-up of the collar detail"
+    }
   ]
 }
