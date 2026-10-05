@@ -13,6 +13,11 @@
 # testing
 /coverage
 
+# playwright e2e output and cached storage states
+test-results/
+playwright-report/
+tests-pw/e2e/playwright/.store/
+
 # next.js
 /.next/
 /out/
@@ -31,6 +36,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+# .env* covers .env and .env.local; example.env holds no values and is committed.
 .env*
 
 # vercel
